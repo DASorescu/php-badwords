@@ -1,9 +1,12 @@
 <?php 
-$paragraph = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. ';
-?>
+$paragraph = "There was something in the sky. What exactly was up there wasn't immediately clear. But there was definitely something in the sky and it was getting bigger and bigger.";
 
+// echo $paragraph;
+
+$badword = $_GET['badword'];
+$replaced_paragraph = str_replace($badword,'***',$paragraph);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +16,8 @@ Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla conse
     <title>Document</title>
 </head>
 <body>
-    <strong><?php echo $paragraph ?></strong>
+    <p><?php echo $paragraph ?></p>
+    <h2><?php echo strlen($paragraph) ?></h2>
+    <p><?php echo $replaced_paragraph?></p>
 </body>
 </html>
