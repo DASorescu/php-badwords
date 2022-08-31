@@ -3,7 +3,7 @@ $paragraph = "There was something in the sky. What exactly was up there wasn't i
 
 // echo $paragraph;
 
-$badword = $_GET['badword'];
+$badword = $_GET['badword'] ?? '';
 $replaced_paragraph = str_replace($badword,'***',$paragraph);
 
 ?>
